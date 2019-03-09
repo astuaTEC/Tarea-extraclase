@@ -8,15 +8,21 @@
 #include "Node.h"
 #include "Collector.h"
 
-
+/**
+ * clase List
+ */
 class List {
 
+    /**
+     * atributos privados
+     */
 private:
     struct Node *head;
 
 
-
-
+  /**
+   * metodos publicos
+   */
 public:
     List();
     Node* getHead();
@@ -27,8 +33,6 @@ public:
     void recorrer();
 
 };
-
-
 
 
 #endif //TE2_0_LIST_H

@@ -8,17 +8,25 @@
 
 #include "Collector.h"
 
+/**
+ * clase Node
+ */
 class Node{
 
+    /**
+     * atributos privados
+     */
 private:
 
     int data;
     Node *sgt;
     static struct Collector *recolector;
 
-
     friend class List;
 
+    /**
+     * metodos publicos
+     */
 public:
     Node(Node*,int);
     int getData() const;

@@ -8,19 +8,30 @@
 #include "Collector.h"
 using namespace std;
 
-
+/**
+ * constructor
+ */
 List::List(){
     head = nullptr;
 }
-
+/**
+ * funcion para acceder al primer nodo de la lista
+ * @return el primer nodo
+ */
 Node* List::getHead() {
     return this->head;
 }
-
+/**
+ * funcion para asignar el primer nodo de la lista
+ * @param node que va a ser el primero
+ */
 void List::setHead(Node *node) {
     this->head= node;
 }
-
+/**
+ * funcion para agregar elementos a una lista
+ * @param n el dato a asignar
+ */
 void List::add(int n) {
     Node* node = new Node(nullptr,n);
     if (!head) {
@@ -33,7 +44,9 @@ void List::add(int n) {
         head->setData(n);
     }
 }
-
+/**
+ * funcion para recorrer todos los elementos de la lista
+ */
 void List::recorrer() {
     if (!head){
         cout << "Lista vacía" << endl;
@@ -50,28 +63,9 @@ void List::recorrer() {
     }
 }
 
-/*
-void List::eliminar(int n) {
-    if(head->getData() == n) {
-        cout << "elimina cabeza" << endl;
-        delete(head);
-        setHead(head->getSgt());
-    }
-    Node* aux = head;
-    while(aux->getSgt()){
-        if(aux->getSgt()->getData() == n){
-            delete(aux->getSgt());
-            aux->setSgt(NULL);
-            cout << "eliminado en while" << endl;
-            break;
-        }
-
-        aux = aux->getSgt();
-    }
-
-}
-*/
-
+/**
+ * funcion para eliminar el ultimo elemento de la lista
+ */
 void List::eliminarUltimo() {
     Node* aux = getHead();
     while(aux->getSgt()->getSgt()){
@@ -79,6 +73,5 @@ void List::eliminarUltimo() {
     }
     delete(aux->getSgt());
     aux->setSgt(nullptr);
-    cout << "eliminado en while" << endl;
 
 }

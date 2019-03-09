@@ -9,13 +9,21 @@
 #include "Collector.h"
 using namespace std;
 
-
+/**
+ * instancia de collector
+ */
 Collector* Collector::instance = 0;
 
+/**
+ * constructor
+ */
 Collector::Collector(){
 
 }
-
+/**
+ * singleton aplicado
+ * @return una instancia de collector
+ */
 Collector* Collector::getInstance()
 {
     if (instance == 0)
@@ -25,7 +33,9 @@ Collector* Collector::getInstance()
 
     return instance;
 }
-
+/**
+ * funcion que recorre todos los elementos del collector
+ */
 void Collector::revisar(){
         if (!cabeza){
             cout << "No hay espacios disponibles"<< endl;
@@ -41,20 +51,16 @@ void Collector::revisar(){
             cout << "________________________"<<endl;
         }
 }
-
-
-void Collector::limpiar() {
-
-}
-
+/**
+ * funcion para asignar espacio de memoria para un nuevo nodo
+ * @return la direccion de memoria donde alojar el nodo
+ */
 void *Collector::nuevo_nodo() {
     cout << "entra a collector"<< endl;
     if(cabeza== nullptr){
-        cout << "devuelve null"<< endl;
         return malloc(sizeof(Node));
     }
     else {
-        cout<< "entra else nuevo_nodo"<< endl;
         Node *aux = getCabeza();
         Node* aux2 = getCabeza()->getSgt();
         if(!aux2){
@@ -62,25 +68,23 @@ void *Collector::nuevo_nodo() {
             return aux;
         }
         while(aux2->getSgt()) {
-            cout<< "entra while nuevo_nodo"<< endl;
             aux = aux2;
             aux2 = aux->getSgt();
 
         }
         aux->setSgt(NULL);
-        cout << "devuelve pos" << endl;
 
         return aux2;
     }
 }
-
+/**
+ * funcion para reciclar espacio de memoria en collector
+ * @param node el nodo que ya ha sido liberado en la lista
+ */
 void Collector::reciclar_nodo(Node* node) {
-    cout << "entra en reciclar"<< endl;
     if (!cabeza) {
-        cout << "entra en if reciclar"<< endl;
         cabeza = node;
     } else {
-        cout << "entra en else reciclar" << endl;
         Node *aux = cabeza;
         cabeza = node;
         cabeza->setSgt(aux);
@@ -88,7 +92,10 @@ void Collector::reciclar_nodo(Node* node) {
 }
 
 Node* Collector:: cabeza = 0;
-
+/**
+ * funcion para acceder al primer nodo de collector
+ * @return el primer nodo
+ */
 Node* Collector:: getCabeza(){
     return this->cabeza;
 }
