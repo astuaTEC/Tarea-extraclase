@@ -1,0 +1,36 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/saymon/CLionProjects/TE2.0/Collector.cpp
+clocale
+-
+cstdlib
+-
+new
+-
+iostream
+-
+Collector.h
+/home/saymon/CLionProjects/TE2.0/Collector.h
+
+/home/saymon/CLionProjects/TE2.0/Collector.h
+Node.h
+/home/saymon/CLionProjects/TE2.0/Node.h
+List.h
+/home/saymon/CLionProjects/TE2.0/List.h
+
+/home/saymon/CLionProjects/TE2.0/List.h
+Node.h
+/home/saymon/CLionProjects/TE2.0/Node.h
+Collector.h
+/home/saymon/CLionProjects/TE2.0/Collector.h
+
+/home/saymon/CLionProjects/TE2.0/Node.h
+Collector.h
+/home/saymon/CLionProjects/TE2.0/Collector.h
+

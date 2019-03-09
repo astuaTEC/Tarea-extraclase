@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/TE2_0.dir/main.cpp.o CMakeFiles/TE2_0.dir/Node.cpp.o CMakeFiles/TE2_0.dir/List.cpp.o CMakeFiles/TE2_0.dir/Collector.cpp.o  -o TE2_0 
