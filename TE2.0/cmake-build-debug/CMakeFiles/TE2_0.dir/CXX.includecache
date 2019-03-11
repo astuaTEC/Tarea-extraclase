@@ -24,41 +24,13 @@ Node.h
 List.h
 /home/saymon/CLionProjects/TE2.0/List.h
 
-/home/saymon/CLionProjects/TE2.0/List.cpp
-clocale
--
-iostream
--
-List.h
-/home/saymon/CLionProjects/TE2.0/List.h
-Collector.h
-/home/saymon/CLionProjects/TE2.0/Collector.h
-
 /home/saymon/CLionProjects/TE2.0/List.h
 Node.h
 /home/saymon/CLionProjects/TE2.0/Node.h
 Collector.h
 /home/saymon/CLionProjects/TE2.0/Collector.h
 
-/home/saymon/CLionProjects/TE2.0/Node.cpp
-cstddef
--
-cstdlib
--
-iostream
--
-Node.h
 /home/saymon/CLionProjects/TE2.0/Node.h
 Collector.h
 /home/saymon/CLionProjects/TE2.0/Collector.h
-
-/home/saymon/CLionProjects/TE2.0/Node.h
-Collector.h
-/home/saymon/CLionProjects/TE2.0/Collector.h
-
-/home/saymon/CLionProjects/TE2.0/main.cpp
-iostream
--
-Node.h
-/home/saymon/CLionProjects/TE2.0/Node.h
 

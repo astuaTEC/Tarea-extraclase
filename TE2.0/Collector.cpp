@@ -42,13 +42,13 @@ void Collector::revisar(){
         }
         else{
             cout << "Estado del collector"<<endl;
-            cout << "--------------------"<< endl;
+            cout << "*****************************************"<< endl;
             Node *aux = cabeza;
             while (aux){
                 cout<< aux << endl;
                 aux = aux->getSgt();
             }
-            cout << "________________________"<<endl;
+            cout << "*****************************************"<<endl;
         }
 }
 /**

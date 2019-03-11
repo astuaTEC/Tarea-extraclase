@@ -53,13 +53,13 @@ void List::recorrer() {
     }
     else{
         cout << "Estado de la Lista"<<endl;
-        cout << "--------------------"<< endl;
+        cout << "__________________________________________________________"<< endl;
         Node *aux = getHead();
         while (aux){
-            cout<< aux << endl;
+            cout<< "Posicion: "<< aux <<" Dato: "<< aux->getData() <<endl;
             aux = aux->getSgt();
         }
-        cout << "_____________________"<< endl;
+        cout << "__________________________________________________________"<< endl;
     }
 }
 
@@ -68,6 +68,9 @@ void List::recorrer() {
  */
 void List::eliminarUltimo() {
     Node* aux = getHead();
+    if(!aux->getSgt()){
+        setHead(nullptr);
+    }
     while(aux->getSgt()->getSgt()){
         aux = aux->getSgt();
     }
